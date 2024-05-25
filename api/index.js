@@ -1,4 +1,11 @@
-import express from 'express'
+import express from 'express';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv'
+dotenv.config();
+
+mongoose.connect(process.env.MONGO_URI).then(()=>{
+    console.log('Connect to mongoDB');
+})
 
 const app = express();
 
