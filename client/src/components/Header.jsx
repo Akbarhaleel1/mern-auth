@@ -11,6 +11,14 @@ export default function Header() {
     }
   };
 
+ // Check if the current route is the admin login page
+ const isOnAdminLogin = location.pathname === '/admin-login';
+
+ // If on the admin login page, return null to hide the header
+ if (isOnAdminLogin) {
+   return null;
+ }
+
   return (
     <div className='bg-slate-200'>
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>

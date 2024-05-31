@@ -9,6 +9,7 @@ export default function SignUp() {
   const navigate = useNavigate()
   const handleChange = (e) =>{
     setFormData({...formData, [e.target.id]: e.target.value})
+    console.log('form data is ',formData);
   }
 
   const handleSumbit = async (e) =>{
